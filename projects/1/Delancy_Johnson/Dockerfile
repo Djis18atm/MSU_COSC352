@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /app
 
 # Copy the Python script into the container
-COPY hello.py .
+COPY Project.py .
 
 # Define the command to run the script
-ENTRYPOINT ["python", "hello.py"]
+ENTRYPOINT ["python", "Project.py"]
