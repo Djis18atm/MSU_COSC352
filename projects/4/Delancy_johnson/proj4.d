@@ -37,7 +37,7 @@ void extractTablesFromFile(string filepath) {
 
             string[] row;
             foreach (cell; cellMatches) {
-                row ~= stripTags(cell.hit).replace(",", " "); // remove commas to avoid breaking CSV
+                row ~= stripTags(cell.hit).replace(",", " "); 
             }
             tableRows ~= row;
         }
@@ -69,7 +69,7 @@ void runMultithreaded(string[] files) {
     auto sw = StopWatch(AutoStart.yes);
 
     auto tasks = taskPool.map!(extractTablesFromFile)(files);
-    foreach (_; tasks) { } // wait for completion
+    foreach (_; tasks) { } 
 
     sw.stop();
     writeln("Multithreaded Execution Time: ", sw.peek.total!"seconds", " seconds");
