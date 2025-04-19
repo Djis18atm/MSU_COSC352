@@ -1,6 +1,9 @@
 # MSU_COSC352
 This course explores the concepts of programming languages including the following topics: syntax and basic characteristics of grammars, constructs for specifying and manipulating data types, control structures and data flow, and run-time considerations. (3 Credits/3 Lecture Hours)
 
+# THIS IS JUST A LOOSE GUIDE - ACTUAL PROJECT AND TEST SCHEDULE IS IN CANVAS COSC352.002_SPRING 2025
+# MOST OF THIS MATERIAL WILL BE COVERED BUT WHAT IS OUTLINED HERE IS SUBJECT TO CHANGE
+
 # Refined Schedule for Programming Course
 
 # Jon White Contact - LinkedIn: https://www.linkedin.com/in/jon-white-bb0b174a/

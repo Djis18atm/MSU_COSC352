@@ -9,3 +9,5 @@
 [No BS Advice for Software Engineers](https://www.youtube.com/watch?v=ga3nYHWtS14)
 
 [Junior Developers, Listen Up...](https://www.youtube.com/watch?v=lCLATD5vEBU)
+
+[I Applied to 241 Software Engineering Internships And This Happened...](https://www.youtube.com/watch?v=bCCPND9RVGw)

@@ -1,0 +1,7 @@
+FROM haskell:8
+
+WORKDIR /opt/example
+
+COPY hello.hs hello.hs
+
+CMD ["runhaskell", "hello.hs"]

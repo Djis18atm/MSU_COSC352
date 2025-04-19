@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the source code into the container
+COPY hello.py /app/hello.py
+
+# Command to execute the program
+ENTRYPOINT ["python", "/app/hello.py"]

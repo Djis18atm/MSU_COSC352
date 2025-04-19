@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Check if both arguments are provided
 if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Usage: $0 <name> <number>"
@@ -14,5 +15,5 @@ fi
 
 # Loop to print the greeting the specified number of times
 for ((i=1; i<=$2; i++)); do
-    echo "$i) Hello, $1!"
+    echo "$i) HELLO!!!->, $1!"
 done

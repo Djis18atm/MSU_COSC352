@@ -4,6 +4,8 @@ FROM alpine:latest
 # Install bash
 RUN apk add --no-cache bash
 
+#hey I'm here.  Hollar at me
+
 # Set the working directory
 WORKDIR /app
 

@@ -11,12 +11,13 @@ number = int(sys.argv[2])
 
 # Define the content of the program to be written
 program_content = f"""
-    print("Hello, {name}!")
+print("Hello, {name}!")
 """
 
+#print(program_content * number)
+
 # Execute the code directly using exec
-global_namespace = {}
-exec(program_content * number, global_namespace)
+exec(program_content * number)
 
 # Write the content to a new file called program.py
 with open("program.py", "w") as f:
