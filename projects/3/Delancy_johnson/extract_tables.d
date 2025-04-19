@@ -6,19 +6,18 @@ import std.string;
 import std.file;
 import std.regex;
 import std.array;
-import std.algorithm; // Needed for `map`
+import std.algorithm; 
 
-/// Strips HTML tags from a string using regex
+
 string stripHtml(string input) {
     auto tagPattern = regex("<[^>]+>");
-    return replaceAll(input, tagPattern, ""); // FIXED: Correct replaceAll usage
+    return replaceAll(input, tagPattern, ""); 
 }
 
-/// Downloads HTML from the target Wikipedia page
+
 string downloadHtml(string url) {
     string html;
-    try {
-        // FIXED: convert to string properly
+    try {   
         auto data = get(url);
         html = cast(string) data;
     } catch (Exception e) {
@@ -28,14 +27,12 @@ string downloadHtml(string url) {
     return html;
 }
 
-/// Extracts all <table class="wikitable"> elements
 string[] extractTables(string html) {
     auto tablePattern = regex(`<table[^>]*class="[^"]*wikitable[^"]*"[^>]*>.*?</table>`, "s");
     auto matches = matchAll(html, tablePattern);
-    return matches.map!(m => m.hit).array; // FIXED: added import std.algorithm
+    return matches.map!(m => m.hit).array; 
 }
 
-/// Parses a single HTML table and returns CSV-formatted text
 string parseTable(string tableHtml) {
     string result;
     auto rowPattern = regex(`<tr[^>]*>.*?</tr>`, "s");
@@ -71,7 +68,7 @@ void main() {
         count++;
         string csvData = parseTable(table);
         string fileName = format("table_%d.csv", count);
-        std.file.write(fileName, csvData); // FIXED: disambiguate std.file.write
+        std.file.write(fileName, csvData);
         writeln("Saved: ", fileName);
     }
 
